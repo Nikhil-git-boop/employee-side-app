@@ -1,7 +1,9 @@
-import axios from "axios";
+
+import axios from 'axios';
 
 const API = axios.create({
-  baseURL: "https://backend-simplehunt-attendance.onrender.com",
+  baseURL: import.meta.env.VITE_API_URL,
+  headers: { 'Content-Type': 'application/json' }
 });
 
 export default API;
