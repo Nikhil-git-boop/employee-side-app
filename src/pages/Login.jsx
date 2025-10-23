@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import API from "../api";
+import axios from "axios";
 import "./Login.css";
 
+const API = axios.create({
+  baseURL: import.meta.env.VITE_API_URL // set in .env
+});
 
 export default function Login() {
   const [employeeId, setEmployeeId] = useState("");
